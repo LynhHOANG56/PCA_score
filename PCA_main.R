@@ -44,6 +44,11 @@ score_dep <- res.ind$coord[,c(1:2)]; summary(score_dep);
 #     Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 #  -6.1656 -0.2067  0.2455  0.0000  0.7457  2.4959 
 
+# > summary(score_dep[,1]) : ALD30
+#     Min. 1st Qu.  Median    Mean  3rd Qu.    Max. 
+#  -7.0720 -0.5758  0.1962  0.0000  1.0624  2.9055 
+
+
 ######## Score des 34881 communes
 #  Prédire en utilisant PCA les Individus supplémentaires : 34881 communes
 ind.sup <- dt_com # 34881 communes
@@ -51,11 +56,10 @@ ind.sup.coord <- predict(res.pca, newdata = ind.sup)
 score_com <- ind.sup.coord[,c(1:2)]; summary(score_com);
 
 #  > summary(score_com[,1]) : ALD-MDS
-#       Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-#   -6.1563   0.1232   0.6571   0.9076   1.3241 126.7172
+#       Min.  1st Qu.   Median     Mean    3rd Qu.     Max. 
+#    -6.5945 -1.3452    -1.0403  -1.1483  -0.7835    11.9673 
 
-
-
-
-
+#  > summary(score_com[,1]) : ALD30
+#       Min.    1st Qu.  Median    Mean   3rd Qu.    Max. 
+#   -9.6628   -1.5939   -0.9055  -0.9856 -0.2350   12.0082 
 
